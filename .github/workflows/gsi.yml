@@ -23,9 +23,9 @@ jobs:
          run: |
               sudo -E apt-get -qq update
               sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev rsync flex bison ccache openjdk-8-jdk expect aria2
-              git config --global user.name "nnippon"
-              git config --global user.email "adameyyad999@gmail.com"
-              git clone --recurse-submodules https://github.com/nnippon/ErfanGSIs
+              git config --global user.name "linuxmobile"
+              git config --global user.email "bdiez19@gmail.com"
+              git clone --recurse-submodules https://github.com/linuxmobile/ErfanGSIs
      
        - name: Setup Erfan Tools
          continue-on-error: true
@@ -58,7 +58,7 @@ jobs:
              echo "bot-sf-user=${{ secrets.SFUSER }}" >> "sf-creds.config"
              echo "bot-send-announcement=true" >> "sf-creds.config"
              echo "bot-sf-proj=${{ secrets.PROJECT }}" >> "sf-creds.config"
-             echo "bot-announcement-id=-1001446520361" >> "sf-creds.config"
+             echo "bot-announcement-id=-1001187842391" >> "sf-creds.config"
              echo "bot-sf-pass=${{ secrets.SFPASS }}" >> "sf-creds.config"
              echo "bot-sf-host=frs.sourceforge.net" >> "sf-creds.config"
        - name: Run Bot
@@ -73,7 +73,7 @@ jobs:
          timeout-minutes: 1
          run: |
               mkdir loop
-              git clone https://github.com/nnippon/gsibot-personal loop/loop
+              git clone https://github.com/linuxmobile/gsibot-personal loop/loop
               cd loop/loop
               echo "1" >> loop.txt
               git add .
