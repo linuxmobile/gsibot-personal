@@ -4,7 +4,7 @@ on: push
 
 env:
   TYPE: build
-  TZ: America/Argentina/buenos_aires
+  TZ: Asia/Manila
 jobs:
   build:
     runs-on: ubuntu-18.04
